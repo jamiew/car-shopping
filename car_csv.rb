@@ -25,6 +25,6 @@ end
 cars += cars_from_url("http://www.cars.com/for-sale/searchresults.action?sf1Dir=DESC&mkId=20064&mdId=22146&rd=100&zc=94117&PMmt=1-1-0&stkTypId=28881&sf2Dir=ASC&sf1Nm=price&yrId=34923&yrId=27381&yrId=20201&yrId=20145&yrId=20200&yrId=20144&sf2Nm=miles&feedSegId=28705&searchSource=UTILITY&crSrtFlds=stkTypId-feedSegId-mkId-mdId-yrId&pgId=2102&rpp=250")
 
 puts "year,name,mileage,price"
-cars.each {|x|
+cars.compact.each {|x|
   puts x.join(',')
 }
